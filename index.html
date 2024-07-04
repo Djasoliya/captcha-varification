@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Form with captcha</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div class="title">Member login</div>
+        <div class="f1">
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter your Username" required>
+        </div>
+        <div class="f1">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter your password" required>
+        </div>
+        <div class="captcha">
+            <label for="captcha-input">Enter the captcha</label>
+            <div id="cap1" onselectstart="return false">
+                <!-- <div id="cap1" onselect="return false" onpaste="return false" onCopy="return false"
+                    onCut="return false" ondrag="return false" ondrop="return false" autocomplete="off"> -->
+            </div>
+            <div class="cap2">
+                <input type="text" id="cap2" placeholder="Enter your captcha here">
+                <button id="captcha-refresh" onclick="genetarteCaptcha()">
+                    <i class="fa fa-refresh"></i>
+                </button>
+            </div>
+        </div>
+        <div class="sub" >
+            <button class="login" onclick="log()">login</button>
+        </div>
+    </div>
+</body>
+
+</html>
